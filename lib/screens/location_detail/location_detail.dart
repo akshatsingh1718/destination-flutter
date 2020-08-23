@@ -4,10 +4,13 @@ import './text_section.dart';
 import '../../models/location.dart';
 
 class LocationDetail extends StatelessWidget {
+  final int _locationId;
+
+  LocationDetail(this._locationId);
+
   @override
   Widget build(BuildContext context) {
-    final locations = Location.fetchAll();
-    final location = locations.first;
+    final location = Location.fetchById(_locationId);
 
     return Scaffold(
       appBar: AppBar(
@@ -25,7 +28,7 @@ class LocationDetail extends StatelessWidget {
          */
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ImageBanner("assets/images/dest.jpg"),
+            ImageBanner(location.imagePath),
             // using cascade to add iterable list in the end of children's list
           ]..addAll(textSections(location))),
     );
