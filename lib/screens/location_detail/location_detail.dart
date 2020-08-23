@@ -22,9 +22,9 @@ class LocationDetail extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ImageBanner("assets/images/dest.jpg"),
-          TextSection(Colors.red),
-          TextSection(Colors.green),
-          TextSection(Colors.amber),
+          TextSection("Summnary1", "Something"),
+          TextSection("Summnary2", "Something"),
+          TextSection("Summnary3", "Something"),
         ],
       ),
     );
