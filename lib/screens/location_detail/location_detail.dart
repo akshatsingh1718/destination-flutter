@@ -7,7 +7,7 @@ class LocationDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hellow World"),
+        title: Text("Location Detail"),
       ),
       body: Column(
         /*
